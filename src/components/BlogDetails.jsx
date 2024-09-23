@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const BlogDetails = ({post}) => {
   return (
-    <div className='mb-6'>
+    <div className='min-w-[670px] mb-6 border-2 p-4 shadow-xl rounded-xl bg-pink-200'>
         <NavLink to={`/blog/${post.id}`}>
             <p className="font-bold text-lg ">{post.title}</p>
         </NavLink>
@@ -20,7 +20,8 @@ const BlogDetails = ({post}) => {
         <p className='text-md mt-[14px]'>{post.content}</p>
         <div className='flex gap-x-3'>
             {post.tags.map( (tag, index) => (
-                <NavLink to={`/tags/${tag.replaceAll(" ","-")}`} key={index} className="text-blue-700 underline font-bold text-xs mt-[5px]">
+                <NavLink to={`/tags/${tag.replaceAll(" ","-")}`} key={index} 
+                className="text-blue-700 underline font-bold text-xs mt-[5px]">
                     <span>{`#${tag}`}</span>
                 </NavLink>
             ) )}

@@ -32,6 +32,7 @@ function App() {
 
   return(
     <Routes>
+      <Route path='/' element= {<Home/>} />
       <Route path='/react-blog' element= {<Home/>} />
       <Route path='/blog/:blogId' element= {<BlogPage/>} />
       <Route path='/tags/:tag' element= {<TagPage/>} />

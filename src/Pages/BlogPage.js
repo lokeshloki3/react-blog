@@ -42,7 +42,7 @@ const BlogPage = () => {
   return (
     <div className="w-full h-full flex flex-col background justify-center items-center">
         <Header/>
-        <div className='bg-white mt-[70px] rounded-lg h-full px-4 max-w-[670px]' >
+        <div className='background mt-[70px] rounded-lg h-full px-4 max-w-[670px]' >
             {
             loading ?
 
@@ -53,14 +53,15 @@ const BlogPage = () => {
             (<div className='w-11/12 flex flex-col justify-center items-center'>
                 <div className="mt-[10px] max-w-2xl pb-4">
                     <button
-                    className="border-2 border-gray-300 py-1 px-4 rounded-md"
+                    className="border-2 text-black bg-yellow-50 font-bold border-black py-1 px-4 rounded-md"
                     onClick={() => navigate(-1)}
                     >
                     Back
                     </button>
                 </div>
                 <BlogDetails post={blog} />
-                <h2 className="max-w-2xl mx-auto mt-6 font-bold text-3xl mb-6"> Related Blogs </h2>
+                <h2 className="w-[670px] bg-gray-700 text-yellow-100 uppercase border-2 border-black 
+                rounded-xl text-center mt-6 font-bold text-4xl p-4 mb-6"> Related Blogs </h2>
                 {
                 relatedblogs.map( (post) => (
                     <div key = {post.id}>
@@ -70,8 +71,8 @@ const BlogPage = () => {
                 }
             </div>) :
 
-            (<div>
-                <p>No Blog Found</p>
+            (<div className='uppercase text-3xl font-bold flex min-h-screen justify-center items-center'>
+                <p className='text-red-700 mr-2'>No Blog Found</p>
             </div>)  
             }
         </div>
