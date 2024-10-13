@@ -1,3 +1,5 @@
+Created a single-page web application that displays blog posts, featuring options like navigating to the next page and filtering blogs by a selected category or hashtag. Created using React.js, Context API, Router, Tailwind CSS.
+
 Demo - https://lokeshloki3.github.io/react-blog/
 
 Steps to run on VS Code - 
